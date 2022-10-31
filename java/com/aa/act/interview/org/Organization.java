@@ -21,7 +21,11 @@ public abstract class Organization {
 	 */
 	public Optional<Position> hire(Name person, String title) {
 		//your code here
-		return Optional.empty();
+		Position p = new Position(title,new Employee(1,person));
+		root.addDirectReport(p);
+		
+		return Optional.of(p);
+		//return Optional.empty();
 	}
 
 	@Override
